@@ -2,37 +2,84 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Xác minh robot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xác Minh Ngay</title>
   <style>
-    body { font-family: Arial; display: flex; justify-content: center; align-items: center; height: 100vh; }
-    .box { border: 1px solid #ccc; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px #ddd; text-align: center; }
-    input[type="text"] { width: 40px; padding: 5px; text-align: center; }
-    button { padding: 10px 20px; margin-top: 10px; }
-    #continue-btn { display: none; background: #28a745; color: white; }
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://zgreen.com.vn/wp-content/uploads/2024/11/image-9.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+    }
+    .container {
+      position: relative;
+      z-index: 2;
+      margin-top: 20%;
+      background: rgba(0,0,0,0.6);
+      padding: 30px 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.4em;
+    }
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+    input {
+      padding: 12px;
+      font-size: 16px;
+      width: 220px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+    button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      background: red;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: darkred;
+    }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h3>🎉 Nhận Ngay 68.000 khi đăng ký tài khoản mới 🎉</h3>
-    <p>1 + 1 = Bao Nhiêu ? <input id="answer" type="text"></p>
-    <button onclick="verify()">XÁC MINH</button>
-    <div id="success" style="display:none; color:green;">✅ Xác minh thành công!</div>
-    <button id="continue-btn" onclick="redirect()">TIẾP TỤC</button>
+  <div class="overlay"></div>
+  <div class="container">
+    <h2>🎉 Nhận Ngay 68.000 khi đăng ký tài khoản mới 🎉</h2>
+    <p>1 + 1 = bao nhiêu?</p>
+    <input type="text" id="answer" placeholder="Nhập câu trả lời vào đây">
+    <br>
+    <button onclick="verify()">XÁC MINH NGAY</button>
   </div>
 
   <script>
     function verify() {
-      var val = document.getElementById("answer").value;
-      if (val == "2") {
-        document.getElementById("success").style.display = "block";
-        document.getElementById("continue-btn").style.display = "inline-block";
+      let ans = document.getElementById("answer").value.trim();
+      if(ans === "2") {
+        // ✅ Đúng thì chuyển hướng link
+        window.location.href = "https://gaviet388.top";
       } else {
-        alert("Sai rồi, hãy thử lại!");
+        alert("❌ Sai rồi! Vui lòng thử lại.");
       }
-    }
-
-    function redirect() {
-      window.location.href = "https://gaviet388.top";
     }
   </script>
 </body>
