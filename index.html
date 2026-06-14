@@ -4,120 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Xác Minh Ngay</title>
-
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       padding: 0;
-      min-height: 100vh;
-      background: url('./bao-sting-gaviet388.png') no-repeat center center fixed;
+      background: url('https://i.postimg.cc/KjRy2SJ9/converted-image-request.jpg') no-repeat center center fixed;
       background-size: cover;
       font-family: Arial, sans-serif;
       color: white;
       text-align: center;
     }
-
     .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,0.55);
-      z-index: 1;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
     }
-
     .container {
       position: relative;
       z-index: 2;
-      margin-top: 20vh;
-      background: rgba(0,0,0,0.65);
+      margin-top: 20%;
+      background: rgba(0,0,0,0.6);
       padding: 30px 20px;
-      border-radius: 12px;
+      border-radius: 10px;
       display: inline-block;
-      max-width: 760px;
-      width: 90%;
-      box-shadow: 0 0 25px rgba(0,0,0,0.6);
     }
-
     h2 {
       margin: 0 0 10px;
-      font-size: 24px;
+      font-size: 22px;
       line-height: 1.4em;
     }
-
     p {
-      font-size: 20px;
+      font-size: 18px;
       margin: 15px 0;
-      font-weight: bold;
     }
-
     input {
-      padding: 14px;
-      font-size: 17px;
-      width: 280px;
-      max-width: 90%;
-      border-radius: 6px;
+      padding: 12px;
+      font-size: 16px;
+      width: 220px;
+      border-radius: 5px;
       border: none;
       outline: none;
-      text-align: center;
     }
-
     button {
-      margin-top: 18px;
-      padding: 14px 28px;
-      font-size: 18px;
+      margin-top: 15px;
+      padding: 12px 25px;
+      font-size: 16px;
       font-weight: bold;
       border: none;
-      border-radius: 6px;
-      background: #ff0000;
+      border-radius: 5px;
+      background: red;
       color: white;
       cursor: pointer;
     }
-
     button:hover {
-      background: #b30000;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        margin-top: 25vh;
-        padding: 25px 15px;
-      }
-
-      h2 {
-        font-size: 20px;
-      }
-
-      p {
-        font-size: 18px;
-      }
+      background: darkred;
     }
   </style>
 </head>
-
 <body>
   <div class="overlay"></div>
-
   <div class="container">
     <h2>🎉 Nhận Ngay 68.000 khi đăng ký tài khoản mới 🎉</h2>
     <p>1 + 1 = bao nhiêu?</p>
-
     <input type="text" id="answer" placeholder="Nhập câu trả lời vào đây">
     <br>
-
     <button onclick="verify()">XÁC MINH NGAY</button>
   </div>
 
   <script>
     function verify() {
       let ans = document.getElementById("answer").value.trim();
-
-      if (ans === "2") {
+      if(ans === "2") {
+        // ✅ Đúng thì chuyển hướng link
         window.location.href = "https://gaviet388.top";
       } else {
         alert("❌ Sai rồi! Vui lòng thử lại.");
