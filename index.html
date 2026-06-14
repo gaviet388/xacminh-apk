@@ -3,82 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xác Minh Ngay</title>
+  <title>Xác minh</title>
+
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: url('https://i.postimg.cc/rmdNmSRH/Chat-GPT-Image-13-07-07-14-thg-6-2026.png') no-repeat center center fixed;
-      background-size: cover;
+      min-height: 100vh;
+      background: #f1f3f5;
       font-family: Arial, sans-serif;
-      color: white;
+      display: flex;
+      justify-content: center;
+      padding-top: 80px;
+    }
+
+    .box {
+      width: 90%;
+      max-width: 330px;
       text-align: center;
     }
-    .overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.6);
-    }
-    .container {
-      position: relative;
-      z-index: 2;
-      margin-top: 20%;
-      background: rgba(0,0,0,0.6);
-      padding: 30px 20px;
-      border-radius: 10px;
-      display: inline-block;
-    }
-    h2 {
-      margin: 0 0 10px;
-      font-size: 22px;
-      line-height: 1.4em;
-    }
-    p {
-      font-size: 18px;
-      margin: 15px 0;
-    }
-    input {
-      padding: 12px;
-      font-size: 16px;
-      width: 220px;
-      border-radius: 5px;
-      border: none;
-      outline: none;
-    }
-    button {
-      margin-top: 15px;
-      padding: 12px 25px;
-      font-size: 16px;
+
+    .notice {
+      background: #fff3cd;
+      color: #8a6d00;
       font-weight: bold;
+      padding: 14px 12px;
+      border-radius: 8px;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+
+    .card {
+      background: white;
+      padding: 18px;
+      border-radius: 8px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    }
+
+    .title {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .question {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 18px;
+      color: #000;
+    }
+
+    input {
+      width: 100%;
+      padding: 13px;
+      font-size: 20px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 13px;
+      font-size: 20px;
       border: none;
-      border-radius: 5px;
-      background: red;
+      border-radius: 4px;
+      background: #1a73e8;
       color: white;
       cursor: pointer;
     }
+
     button:hover {
-      background: darkred;
+      background: #155fc0;
+    }
+
+    .line {
+      height: 5px;
+      background: #e5e5e5;
+      border-radius: 10px;
+      margin-top: 14px;
     }
   </style>
 </head>
+
 <body>
-  <div class="overlay"></div>
-  <div class="container">
-    <h2>🎉 Nhận quà tặng 68canh khi mở cây cùng bảo 🎉</h2>
-    <p>1 + 1 = bao nhiêu?</p>
-    <input type="text" id="answer" placeholder="Nhập câu trả lời vào đây">
-    <br>
-    <button onclick="verify()">XÁC MINH NGAY</button>
+  <div class="box">
+    <div class="notice">
+      N.-Ẹ.-P ĐẦU ĐỂ KÍCH HOẠT TOÀN BỘ ƯU ĐÃI TÂN THỦ
+    </div>
+
+    <div class="card">
+      <div class="title">Xác minh bạn là con người</div>
+      <div class="question">6 + 3 = ?</div>
+
+      <input type="text" id="answer" placeholder="">
+      <button onclick="verify()">Xác nhận</button>
+
+      <div class="line"></div>
+    </div>
   </div>
 
   <script>
     function verify() {
       let ans = document.getElementById("answer").value.trim();
-      if(ans === "2") {
-        // ✅ Đúng thì chuyển hướng link
+
+      if (ans === "9") {
         window.location.href = "https://gaviet388.top";
       } else {
-        alert("❌ Sai rồi! Vui lòng thử lại.");
+        alert("Sai rồi! Vui lòng thử lại.");
       }
     }
   </script>
